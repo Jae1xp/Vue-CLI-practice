@@ -12,19 +12,18 @@
 
 <script>
 export default {
+  props: { // This Method of is called VALIDATION. Receiving props as an OBJECT instead of an array, having ninjas as another object, and setting the validiation inside of it. 
+    ninjas: {
+      type: Array,
+      required: true
+    }
+  },
+  // props: ['ninjas'] More simple way of receiving data but doesn't include validation
   data () {
     return {
-      ninjas: [
-        {name: 'Jae', specialty: 'Vue Components', show: false},
-        {name: 'Alex', specialty: 'HTML Wizardry', show: false},
-        {name: 'Krystyna', specialty: 'Click Events', show: false},
-        {name: 'Patrick', specialty: 'Conditionals', show: false},
-        {name: 'Alexa', specialty: 'Webpack', show: false},
-        {name: 'Dan', specialty: 'Data Diggin', show: false}
-      ]
+      
     }
   }
-
 }
 </script>
 
