@@ -23,6 +23,32 @@ export default {
     return {
       
     }
+  },
+  methods: {
+    deleteNinja: function() {
+      this.ninja.pop();
+    }
+  },
+  // Lifecycle Hooks
+  beforeCreate() {
+    alert('Before create hook!');
+  },
+  // Good point to go fetch data from a DB or something 
+  created() {
+    alert('Created hook!');
+  },
+  beforeMount() {
+    alert('Before mount!');
+  },
+  // Good point to manipulate the dom ONCE it is mounted
+  mounted() {
+    alert('Mounted!');
+  },
+  beforeUpdate() {
+    alert('Before update!');
+  },
+  updated() {
+    alert('Updated!!!!');
   }
 }
 </script>
