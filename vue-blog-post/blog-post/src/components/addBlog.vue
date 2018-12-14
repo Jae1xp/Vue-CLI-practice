@@ -9,15 +9,19 @@
       <label>Blog Content:</label>
       <textarea v-model="blog.content"></textarea>
       <div id="checkboxes">
-        <label>Cheese</label>
-        <input type="checkbox" value="Cheese" v-model="blog.categories" />
-        <label>Ice Cream</label>
-        <input type="checkbox" value="Ice Cream" v-model="blog.categories" />
-        <label>French Fries</label>
-        <input type="checkbox" value="French Fries" v-model="blog.categories" />
-        <label>Wings</label>
-        <input type="checkbox" value="Wings" v-model="blog.categories" />
+        <label>Cooking</label>
+        <input type="checkbox" value="Cooking" v-model="blog.categories" />
+        <label>Gaming</label>
+        <input type="checkbox" value="Gaming" v-model="blog.categories" />
+        <label>Outdoor Activities</label>
+        <input type="checkbox" value="Outdoor Activities" v-model="blog.categories" />
+        <label>Reading</label>
+        <input type="checkbox" value="Reading" v-model="blog.categories" />
       </div>
+      <label>Author:</label>
+      <select v-model="blog.author">
+        <option v-for="author in authors">{{author}}</option>
+      </select>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
@@ -28,6 +32,7 @@
       <ul>
         <li v-for="category in blog.categories">{{category}}</li>
       </ul>
+      <p>Author: {{blog.author}}</p>
     </div>
   </div>
 </template>
@@ -42,8 +47,10 @@ export default {
       blog: {
         title: '',
         content: '',
-        categories: []
-      }
+        categories: [],
+        author: ''
+      },
+      authors: ['Michelle Obama', 'J.K. Rowling', 'Randy Pausch', 'Kobe Bryant']
     }
   },
   methods: {
