@@ -13,8 +13,8 @@
         <input type="checkbox" value="Cooking" v-model="blog.categories" />
         <label>Gaming</label>
         <input type="checkbox" value="Gaming" v-model="blog.categories" />
-        <label>Outdoor Activities</label>
-        <input type="checkbox" value="Outdoor Activities" v-model="blog.categories" />
+        <label>Sports</label>
+        <input type="checkbox" value="Sports" v-model="blog.categories" />
         <label>Reading</label>
         <input type="checkbox" value="Reading" v-model="blog.categories" />
       </div>
