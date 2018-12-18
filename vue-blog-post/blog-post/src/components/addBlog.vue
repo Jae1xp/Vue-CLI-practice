@@ -64,6 +64,7 @@ export default {
     }
   },
   methods: {
+    // form to add a new blog post
     post: function() {
       // Can use $http only after installing vue resource
       // Check this URL to see why we require BODY and USER ID
