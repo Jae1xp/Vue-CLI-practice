@@ -3,8 +3,8 @@
     <h1>All Blog Articles</h1>
     <div v-for="blog in blogs" class="single-blog">
       <!-- Using RAINBOW as a randomly named directive -->
-      <h2 v-rainbow>{{blog.title}}</h2>
-      <article v-rainbow>{{blog.body}}</article>
+      <router-link v-bind:to="'/blog/' + blog.id"><h2>{{blog.title}}</h2></router-link>
+      <article >{{blog.body}}</article>
     </div>
   </div>
   

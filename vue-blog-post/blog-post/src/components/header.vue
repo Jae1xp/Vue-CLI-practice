@@ -1,8 +1,8 @@
 <template>
   <nav>
     <ul>
-      <li><router-link to="/">All Blogs</router-link></li>
-      <li><router-link to="/add">Add a blog</router-link></li>
+      <li><router-link to="/" exact>All Blogs</router-link></li>
+      <li><router-link to="/add" exact>Add a blog</router-link></li>
     </ul>
   </nav>
 </template>
@@ -32,5 +32,9 @@ export default {
     background: #444;
     padding: 14px 0px;
     margin-bottom: 40px;
+  }
+  .router-link-active {
+    background: #eee;
+    color: #444;
   }
 </style>
