@@ -26,6 +26,7 @@ export default {
     this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data) {
       console.log(data);
       this.blogs = data.body.slice(0, 10) // gets the first 10 elements from the array of dummy API data
+      console.log(this.blogs)
     })
   }
 }

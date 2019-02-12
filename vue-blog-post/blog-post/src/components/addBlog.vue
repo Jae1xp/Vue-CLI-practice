@@ -18,6 +18,8 @@
         <input type="checkbox" value="Sports" v-model="blog.categories" />
         <label>Reading</label>
         <input type="checkbox" value="Reading" v-model="blog.categories" />
+        <label>Programming</label>
+        <input type="checkbox" value="Programming" v-model="blog.categories" />
       </div>
       <label>Author:</label>
       <select v-model="blog.author">
@@ -26,10 +28,6 @@
       <!-- .prevent is the = to prevent default -->
       <button v-on:click.prevent="post">Add Post!</button> 
     </form>
-    <!-- If the form has been submitted, this message will show -->
-    <div v-if="!submitted">
-      <h2>Thanks for adding your post!!</h2>
-    </div>
 
     <div id="preview">
       <h3>Preview Blog</h3>
@@ -42,11 +40,16 @@
       </ul>
       <p>Author: {{blog.author}}</p>
     </div>
+
+    <!-- If the form has been submitted, this message will show -->
+    <div v-if="submitted">
+      <h2>Thanks for adding your post!!</h2>
+    </div>
   </div>
+  
 </template>
 
 <script>
-
 
 export default {
 
@@ -58,7 +61,7 @@ export default {
         categories: [],
         author: ''
       },
-      authors: ['Michelle Obama', 'J.K. Rowling', 'Randy Pausch', 'Kobe Bryant'],
+      authors: ['Michelle Obama', 'J.K. Rowling', 'Randy Pausch', 'Kobe Bryant', 'Jae Son'],
       // tracks whether the form has been submitted or not
       submitted: false,
     }
