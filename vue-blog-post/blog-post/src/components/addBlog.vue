@@ -18,8 +18,8 @@
         <input type="checkbox" value="Sports" v-model="blog.categories" />
         <label>Reading</label>
         <input type="checkbox" value="Reading" v-model="blog.categories" />
-        <label>Programming</label>
-        <input type="checkbox" value="Programming" v-model="blog.categories" />
+        <label>Music</label>
+        <input type="checkbox" value="Music" v-model="blog.categories" />
       </div>
       <label>Author:</label>
       <select v-model="blog.author">
@@ -56,12 +56,12 @@ export default {
   data () {
     return {
       blog: {
-        title: '',
-        content: '',
+        title: "",
+        content: "",
         categories: [],
-        author: ''
+        author: ""
       },
-      authors: ['Michelle Obama', 'J.K. Rowling', 'Randy Pausch', 'Kobe Bryant', 'Jae Son'],
+      authors: ['Michelle Obama', 'J.K. Rowling', 'Randy Pausch', 'Kobe Bryant', 'Jae Son', 'Chance the Rapper'],
       // tracks whether the form has been submitted or not
       submitted: false,
     }
@@ -71,11 +71,7 @@ export default {
     post: function() {
       // Can use $http only after installing vue resource
       // Check this URL to see why we require BODY and USER ID
-      this.$http.post('http://jsonplaceholder.typicode.com/posts', {
-        title: this.blog.title,
-        body: this.blog.content,
-        userId: 1,
-      }).then(function(data) {
+      this.$http.post('https://blog-project-305a0.firebaseio.com/posts.json', this.blog).then(function(data) {
         console.log('this is the data', data);
         this.submitted = true;
       });
